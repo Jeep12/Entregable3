@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    background-color: rgb(237, 237, 237);
+    padding: 2em;
+    background-image: url("../assets/images/endless-constellation.svg");
+    background-position: center center;
+}
+
+.selected {
+    transform: scale(1.4);
+    filter: drop-shadow(0px 0px 2px black);
+    padding: 2px;
+}
+
+:root {
+    --bg1: rgba(212, 212, 212, 0.556);
+    --bg2: rgb(49, 48, 48);
+}
+
+.wrapper-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-optical-sizing: auto;
+    color: black !important;
+    font-style: normal;
+}
+
+.wrapper-form h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper-form h1::before {}
+
+.form {
+    background-color: var(--bg1);
+    padding: 2em;
+    width: 500px;
+    position: relative;
+    transition: transform .5s ease, filter .5s ease-in;
+    /* Aquí combinamos ambas transiciones */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form:hover:not(:focus-within) {}
+
+
+
+.form::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    width: 10px;
+    height: 100%;
+    border-right: 10px solid var(--bg2);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+}
+
+.form::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 8px solid black;
+    box-shadow: -20px 0px 0px black;
+
+
+
+}
+
+
+.row {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.wrapper-number-telephone {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+
+}
+
+.wrapper-list-flags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-button-country {
+    display: flex;
+    
+
+}
+
+.list-button-country li {
+    padding: 5px;
+
+    /* Añade margen entre los elementos */
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    .form {
+        width: 100%;
+        background-color: rgba(250, 235, 215, 0);
+        
+    }
+    .wrapper-list-flags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .list-button-country {
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    .list-button-country li {
+        flex-basis: calc(33.33% - 20px);
+        /* Establece el ancho de cada elemento */
+        margin: 10px;
+        /* Añade margen entre los elementos */
+    
+    
+    }
+}
+
+
+.list-button-country li img {
+}
+
+
+
+.wrapper-number-telephone label {
+    text-align: center;
+    width: 100%;
+    ;
+}
+
+.wrapper-list-flags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper-inputTel {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper-inputTel .show {
+    background-color: white;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wrapper-inputTel .showCountry {}
+
+.wrapper-inputTel .inputNumber {
+    width: 85%;
+
+}
+
+.wrapper-inputTel .inputNumber input {
+    width: 100%
+}
+
+
+
+.row label {
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    color: black;
+
+}
+
+.row input {
+    width: 100%;
+    border-radius: 2px;
+    height: 40px;
+}
+
+.row button {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    background-color: #313030;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    background-color: white;
+    border: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea::placeholder {
+    text-align: center !important;
+    color: inherit;
+}
