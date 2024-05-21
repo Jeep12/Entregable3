@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/utils/fontawesome/css/all.min.css">
+        <!--  CDN DE TOASTIFY CSS-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="assets/utils/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,6 +19,7 @@
     <div class="wrapper-form">
         <form class="form">
             <div class="row">
+
                 <h1>Consúltenos</h1>
                 <div class="alert alert-secondary" role="alert">
                     <i class="fa-solid fa-envelope"></i> <br> Deje su mensaje para poder comunicarnos con usted
@@ -48,6 +53,9 @@
                         </ul>
                     </div>
                     <p style="text-align: center;">Característica y número</p>
+                    <div class="alert alert-danger" id="showErrorNumberTelephone" role="alert">
+                        <i class="fa-solid fa-circle-exclamation"></i> Número de teléfono incompleto
+                    </div>
                     <div class="wrapper-inputTel">
 
                         <div class="show">
@@ -57,7 +65,7 @@
 
 
                         <div class="inputNumber">
-                            <input type="number" placeholder="2983 402258">
+                            <input type="number" placeholder="2983 402258" id="inputTelephone" >
                         </div>
 
 
@@ -68,25 +76,29 @@
                 </div>
             </div>
             <div class="row">
-
                 <label for="">Ingrese su email</label>
-                <input type="email" placeholder="name@example.com">
+                <div class="alert alert-danger" id="showErrorEmail" role="alert">
+                    <i class="fa-solid fa-circle-exclamation"></i> Email incompleto
+                </div>
+                <input type="email" placeholder="name@example.com" id="inputEmail" >
             </div>
             <div class="row">
                 <label for="">Ingrese el asunto</label>
-                <input type="text" placeholder="Asunto">
+                <input type="text" placeholder="Asunto" id="matter" >
             </div>
             <div class="row">
                 <label for="">Ingrese su mensaje</label>
-                <textarea type="textarea" placeholder="Example "></textarea>
+                <textarea type="textarea" placeholder="Example" ></textarea>
 
             </div>
             <div class="row">
-                <button>Enviar</button>
+                <button id="submitMessage">Enviar</button>
             </div>
         </form>
     </div>
-    <script src="js/main.js"></script>
+    <!--  CDN DE TOASTIFY SCRPIT-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
